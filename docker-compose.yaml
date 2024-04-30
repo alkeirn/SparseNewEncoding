@@ -29,7 +29,7 @@ version: '3'
 services:
   labs:
     hostname: labs
-    image: kartikesh314/accelergy-timeloop-infrastructure:latest-${DOCKER_ARCH}
+    image: kartikesh314/timeloop-accelergy-pytorch:latest-${DOCKER_ARCH}
     ports:
       - "8888:8888"
     volumes:
