@@ -31,8 +31,8 @@ architecture:
                 technology: "45nm"
                 power_gated_at: null
             required_actions:
-              - read
               - leak
+              - read
               - write
               - update
             enabled: true
@@ -46,6 +46,17 @@ architecture:
                 metadata_storage_depth: 16
                 metadata_storage_width: 4
                 metadata_datawidth: 4
+                action_optimization:
+                  - type: skipping
+                    options:
+                      - target: Inputs
+                        condition_on:
+                          - Weights
+                  - type: skipping
+                    options:
+                      - target: Outputs
+                        condition_on:
+                          - Weights
                 has_power_gating: false
                 n_banks: 2
                 cluster_size: 1
@@ -58,8 +69,8 @@ architecture:
                 technology: "45nm"
                 power_gated_at: null
             required_actions:
-              - read
               - leak
+              - read
               - write
               - update
             enabled: true
@@ -492,31 +503,6 @@ compound_components:
                 actions:
                   - name: add
 mapping: []
-sparse_optimizations:
-    targets:
-      - representation_format:
-            data_spaces:
-              - name: Weights
-                ranks:
-                  - format: RLE
-        name: BackingStorage
-      - representation_format:
-            data_spaces:
-              - name: Weights
-                ranks:
-                  - format: RLE
-        action_optimization:
-          - type: skipping
-            options:
-              - target: Inputs
-                condition_on:
-                  - Weights
-          - type: skipping
-            options:
-              - target: Outputs
-                condition_on:
-                  - Weights
-        name: Buffer
 mapper:
     optimization_metrics:
       - edp

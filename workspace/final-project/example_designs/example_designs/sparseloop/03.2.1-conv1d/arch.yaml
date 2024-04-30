@@ -16,12 +16,12 @@ architecture:
       metadata_storage_depth: 128
       metadata_storage_width: 4
       metadata_datawidth: 4
-    sparse_optimizations:
-      representation_format:
-        data_spaces:
-          - name: Weights
-            ranks:
-              - format: RLE
+  #  sparse_optimizations:
+  #    representation_format:
+  #      data_spaces:
+  #        - name: Weights
+  #          ranks:
+  #            - format: RLE
 
 
   - !Container
@@ -38,12 +38,12 @@ architecture:
       metadata_storage_depth: 16
       metadata_storage_width: 4
       metadata_datawidth: 4
-    sparse_optimizations:
-      representation_format:
-        data_spaces:
-          - name: Weights
-            ranks:
-              - format: RLE
+   # sparse_optimizations:
+   #   representation_format:
+   #     data_spaces:
+   #       - name: Weights
+   #         ranks:
+   #           - format: RLE
 
       action_optimization:
         - type: skipping

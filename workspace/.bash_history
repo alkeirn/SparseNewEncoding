@@ -69,3 +69,19 @@ accelergy input. -o output/
 pwd
 acclergy /home/workspace/final-project/tutorial_exercises/01_accelergy_timeloop_2020_ispass/accelergy/01_primitive_architecture_ERT/input -o /home/workspace/final-project/tutorial_exercises/01_accelergy_timeloop_2020_ispass/accelergy/01_primitive_architecture_ERT/output/
 accelergy /home/workspace/final-project/tutorial_exercises/01_accelergy_timeloop_2020_ispass/accelergy/01_primitive_architecture_ERT/input -o /home/workspace/final-project/tutorial_exercises/01_accelergy_timeloop_2020_ispass/accelergy/01_primitive_architecture_ERT/output/
+pwd
+cd ..
+ls
+python3 run_example_designs.py --architecture sparseloop/03.2.1-conv1d
+ls
+cd workspace
+ls
+cd final-project/
+ls
+cd example_designs/
+ls
+cd example_designs/
+ls
+cd ..
+ls
+python3 run_example_designs.py --architecture sparseloop/03.2.1-conv1d

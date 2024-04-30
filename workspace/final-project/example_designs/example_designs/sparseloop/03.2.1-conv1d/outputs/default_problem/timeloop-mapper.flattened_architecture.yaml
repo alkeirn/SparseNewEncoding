@@ -29,8 +29,8 @@ architecture:
             n_rdwr_ports: 1
             metadata_counter_width: 0
         required_actions:
-          - read
           - leak
+          - read
           - write
           - update
         enabled: true
@@ -44,6 +44,17 @@ architecture:
             metadata_storage_depth: 16
             metadata_storage_width: 4
             metadata_datawidth: 4
+            action_optimization:
+              - type: skipping
+                options:
+                  - target: Inputs
+                    condition_on:
+                      - Weights
+              - type: skipping
+                options:
+                  - target: Outputs
+                    condition_on:
+                      - Weights
             has_power_gating: false
             n_banks: 2
             cluster_size: 1
@@ -62,8 +73,8 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - read
           - leak
+          - read
           - write
           - update
         enabled: true
