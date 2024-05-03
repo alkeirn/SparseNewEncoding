@@ -1,3 +1,19 @@
+## Sparse New Encodings
+This repo runs new encodings (Huffman and Delta) in the example files to compare against existing sparseloop encodings. 
+
+### Other modified repos
+In order to add new encodings to sparseloop, other parts of the timeloop/accelergy infrastructure had to be modified. Please see below for a list of modified repos and their changes.
+
+`timeloop`: Added two new format models at timeloop/src/workload/format-models: `delta-encoding.cpp` and `huffman-encoding.cpp`. These files decribe the approximate bit workload expected when using these encodings. Corresponding header files added at timeloop/include/workload/format-models. Other files in timeloop were modified to accept these new classes in addition to the existing ones. Repo can be found here: https://github.com/alkeirn/timeloop 
+
+`timeloopfe`: Minor modifications to timeloopfe/timeloopfe/v4/sparse_optimizations.py to include new encodings. Repo can be found here: https://github.com/alkeirn/timeloopfe
+
+`accelergy-timeloop-infrastructure`: Modifications to swap out git submodules with new repos. Repo can be found here: https://github.com/alkeirn/accelergy-timeloop-infrastructure
+
+`timeloop-acclergy-pytorch`: Changed to use the new timeloop-accelergy-infrastructure repo. Repo can be founf here: https://github.com/mk314k/timeloop-accelergy-pytorch
+
+These repos were used to make a new docker image of timeloop and accelergy, which can be pulled by this repo to run the new encoding styles. Docker image found here: https://hub.docker.com/r/kartikesh314/accelergy-timeloop-infrastructure
+
 ## Accelergy-Timeloop Infrastructure
 This docker aims to provide an experimental environment for easy plug-and-play of examples that run on the accelergy-timeloop DNN accelerator evaluation infrastructure. 
 
