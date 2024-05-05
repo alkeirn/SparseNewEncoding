@@ -14,10 +14,10 @@ architecture:
             class: smartbuffer_metadata
             attributes:
                 depth: 512
-                width: 8
-                datawidth: 8
+                width: 64
+                datawidth: 64
                 metadata_storage_depth: 0
-                metadata_storage_width: 8
+                metadata_storage_width: 0
                 metadata_datawidth: 0
                 has_power_gating: false
                 n_banks: 2
@@ -31,20 +31,20 @@ architecture:
                 technology: "45nm"
                 power_gated_at: null
             required_actions:
-              - read
-              - leak
-              - write
               - update
+              - leak
+              - read
+              - write
             enabled: true
           - name: Buffer[1..1]
             class: storage
             subclass: regfile_metadata
             attributes:
                 depth: 64
-                width: 8
-                datawidth: 8
+                width: 64
+                datawidth: 64
                 metadata_storage_depth: 0
-                metadata_storage_width: 8
+                metadata_storage_width: 0
                 metadata_datawidth: 0
                 has_power_gating: false
                 n_banks: 2
@@ -58,10 +58,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: null
             required_actions:
-              - read
-              - leak
-              - write
               - update
+              - leak
+              - read
+              - write
             enabled: true
           - name: mac[1..1]
             class: intmac
@@ -114,7 +114,7 @@ problem:
         densities:
             Weights:
                 distribution: fixed_structured
-                density: 0.2
+                density: 0.92
                 band_width: 0
                 workload_tensor_size: 0
 compound_components:
@@ -498,13 +498,13 @@ sparse_optimizations:
             data_spaces:
               - name: Weights
                 ranks:
-                  - format: HF
+                  - format: D
         name: BackingStorage
       - representation_format:
             data_spaces:
               - name: Weights
                 ranks:
-                  - format: HF
+                  - format: D
         action_optimization:
           - type: skipping
             options:

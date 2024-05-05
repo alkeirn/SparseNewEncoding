@@ -2,11 +2,10 @@ mapping:
   - target: Buffer
     type: datatype
     keep:
-      []
-    bypass:
       - Weights
-      - Inputs
       - Outputs
+    bypass:
+      - Inputs
   - target: BackingStorage
     type: datatype
     keep:

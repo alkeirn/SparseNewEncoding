@@ -10,7 +10,7 @@ THIS_SCRIPT_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 EXAMPLE_DIR = os.path.join(THIS_SCRIPT_DIR, "example_designs")
 TOP_JINJA_PATH = os.path.join(EXAMPLE_DIR, "top.yaml.jinja2")
 
-arch_yaml_name = "HF_arch.yaml" # change this to switch between arch files in the same folder
+arch_yaml_name = "D_arch.yaml" # change this to switch between arch files in the same folder
 
 def get_architecture_targets():
     targets = []

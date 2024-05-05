@@ -2,7 +2,7 @@ ART_summary:
     version: '0.4'
     table_summary:
       - name: system_top_level.BackingStorage[1..1]
-        area: 1921.3659
+        area: 13619.2484
         primitive_estimations:
           - name: storage.storage
             estimator: CactiSRAM
@@ -15,9 +15,9 @@ ART_summary:
           - name: metadata_counters[0..1]
             estimator: Aladdin_table
       - name: system_top_level.Buffer[1..1]
-        area: 33663.52388
+        area: 45910.56388
         primitive_estimations:
-          - name: storage.storage.storage[1..2048]
+          - name: storage.storage.storage[1..4096]
             estimator: Library
           - name: storage.storage.comparator[1..64]
             estimator: Library
