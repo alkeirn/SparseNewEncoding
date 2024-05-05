@@ -10,7 +10,7 @@ In order to add new encodings to sparseloop, other parts of the timeloop/acceler
 
 `accelergy-timeloop-infrastructure`: Modifications to swap out git submodules with new repos. Repo can be found here: https://github.com/alkeirn/accelergy-timeloop-infrastructure
 
-`timeloop-acclergy-pytorch`: Changed to use the new timeloop-accelergy-infrastructure repo. Repo can be founf here: https://github.com/mk314k/timeloop-accelergy-pytorch
+`timeloop-acclergy-pytorch`: Changed to use the new timeloop-accelergy-infrastructure repo. Repo can be found here: https://github.com/mk314k/timeloop-accelergy-pytorch
 
 These repos were used to make a new docker image of timeloop and accelergy, which can be pulled by this repo to run the new encoding styles. Docker image found here: https://hub.docker.com/r/kartikesh314/accelergy-timeloop-infrastructure
 

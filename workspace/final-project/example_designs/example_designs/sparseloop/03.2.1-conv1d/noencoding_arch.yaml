@@ -11,18 +11,11 @@ architecture:
     class: smartbuffer_metadata
     attributes:
       depth: 512
-      width: 32
-      datawidth: 8
-      metadata_storage_depth: 128
-      metadata_storage_width: 4
-      metadata_datawidth: 4
-  #  sparse_optimizations:
-  #    representation_format:
-  #      data_spaces:
-  #        - name: Weights
-  #          ranks:
-  #            - format: RLE
-
+      width: 64
+      datawidth: 64
+      metadata_storage_depth: 0
+      metadata_storage_width: 0
+      metadata_datawidth: 0
 
   - !Container
     name: PE
@@ -33,18 +26,12 @@ architecture:
     subclass: regfile_metadata
     attributes:
       depth: 64
-      width: 8
-      datawidth: 8
-      metadata_storage_depth: 16
-      metadata_storage_width: 4
-      metadata_datawidth: 4
-   # sparse_optimizations:
-   #   representation_format:
-   #     data_spaces:
-   #       - name: Weights
-   #         ranks:
-   #           - format: RLE
-
+      width: 64
+      datawidth: 64
+      metadata_storage_depth: 0
+      metadata_storage_width: 0
+      metadata_datawidth: 0
+    sparse_optimizations:
       action_optimization:
         - type: skipping
           options:

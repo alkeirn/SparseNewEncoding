@@ -5,11 +5,11 @@ architecture:
         class: smartbuffer_metadata
         attributes:
             depth: 512
-            width: 32
+            width: 8
             datawidth: 8
-            metadata_storage_depth: 128
-            metadata_storage_width: 4
-            metadata_datawidth: 4
+            metadata_storage_depth: 0
+            metadata_storage_width: 8
+            metadata_datawidth: 0
             has_power_gating: false
             n_banks: 2
             cluster_size: 1
@@ -29,8 +29,8 @@ architecture:
             n_rdwr_ports: 1
             metadata_counter_width: 0
         required_actions:
-          - leak
           - read
+          - leak
           - write
           - update
         enabled: true
@@ -41,20 +41,9 @@ architecture:
             depth: 64
             width: 8
             datawidth: 8
-            metadata_storage_depth: 16
-            metadata_storage_width: 4
-            metadata_datawidth: 4
-            action_optimization:
-              - type: skipping
-                options:
-                  - target: Inputs
-                    condition_on:
-                      - Weights
-              - type: skipping
-                options:
-                  - target: Outputs
-                    condition_on:
-                      - Weights
+            metadata_storage_depth: 0
+            metadata_storage_width: 8
+            metadata_datawidth: 0
             has_power_gating: false
             n_banks: 2
             cluster_size: 1
@@ -73,8 +62,8 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - leak
           - read
+          - leak
           - write
           - update
         enabled: true

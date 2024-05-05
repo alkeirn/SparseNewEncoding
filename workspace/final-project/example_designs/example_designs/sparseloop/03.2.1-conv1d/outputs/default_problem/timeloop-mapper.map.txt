@@ -1,4 +1,4 @@
-BackingStorage [ Weights:3 (3) Inputs:11 (11) Outputs:9 (9) ] 
+BackingStorage [ Weights:3 (1) Inputs:11 (11) Outputs:9 (9) ] 
 Buffer [ ] 
 ----------
 | for Q in [0:9)
